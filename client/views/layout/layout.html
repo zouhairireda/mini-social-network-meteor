@@ -1,0 +1,29 @@
+<template name="mainLayout">
+	
+	<body>
+	{{setTitle}}
+		<div class="container">
+			<div class="row">
+				<header class="col-md-12 jumbotron">
+					<h1>
+						{{getGlobal 'appName'}} <br />
+						<small class="slogan">{{getGlobal 'appSlogan'}}</small>
+					</h1>
+				</header>
+			</div>
+			<div class="row">
+				<nav class="col-md-3">{{> menu}}</nav>
+				<section class="col-md-9 well">{{> yield}}</section>
+			</div>
+			<div class="row">
+				<footer class="col-md-12">
+					<hr />
+					<div class="footer">
+						<p>Propulsed by Meteor.js</p>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+	
+</template>
